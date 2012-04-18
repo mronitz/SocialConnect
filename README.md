@@ -1,5 +1,12 @@
 This plugin is to connect users to your CakePHP 2.x site using their Social Network account.
 
+### Dependencies
+* Cake/Utility/Xml.php
+* Cake/Network/Http/HttpSocket.php
+
+Both standard in Cake 2.x
+
+
 ### Installation
 
 #### Clone
@@ -46,3 +53,5 @@ Usable as a component
 			$profileData = $this->SocialConnect->get_network_profile($networkName, $accessToken);
 
 
+## @TODO
+*	Create easier config, perhaps even move the config to Cake itself instead of in the plugin
