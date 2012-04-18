@@ -1,27 +1,27 @@
 This plugin is to connect users to your CakePHP 2.x site using their Social Network account.
 
-### Dependencies
+## Dependencies
 * Cake/Utility/Xml.php
 * Cake/Network/Http/HttpSocket.php
 
 Both standard in Cake 2.x
 
 
-### Installation
+## Installation
 
-#### Clone
+### Clone
 
 Clone from github: in your plugin directory type 
 
 	git clone https://github.com/xzazx/SocialConnect.git SocialConnect
 
-#### Submodule
+### Submodule
 
 Add as Git submodule: in your plugin directory type 
 
 	git submodule add https://github.com/xzazx/SocialConnect.git SocialConnect
 
-#### Manual
+### Manual
 
 Download as archive from github and extract to app/plugins/SocialConnect
 
@@ -37,7 +37,7 @@ Usable as a component
 		'SocialConnect.SocialConnect'
 	);
 	
-### Example of usage
+## Example of usage
 
 	// Get the accessToken, or redirect if it doesn't exists in the session yet.
 			$accessToken = $this->SocialConnect->get_access_token(
