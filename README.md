@@ -36,7 +36,9 @@ Usable as a component
 	public $components = array(
 		'SocialConnect.SocialConnect'
 	);
-	
+
+## Be sure to first get and set your social network keys (API keys/secret)
+
 ## Example of usage
 
 	// Get the accessToken, or redirect if it doesn't exists in the session yet.
