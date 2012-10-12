@@ -37,7 +37,7 @@ Usable as a component
 		'SocialConnect.SocialConnect'
 	);
 
-## Be sure to first get and set your social network keys (API keys/secret)
+### Be sure to first get and set your social network keys (API keys/secret), and change the callback URL in the config file
 
 ## Example of usage
 
