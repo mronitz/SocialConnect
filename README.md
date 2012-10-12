@@ -44,7 +44,7 @@ Usable as a component
 	// Get the accessToken, or redirect if it doesn't exists in the session yet.
 			$accessToken = $this->SocialConnect->get_access_token(
 				$networkName,
-				array(
+				array( // Callback url after connecting to network, login User usually
 					'controller' => 'users',
 					'action' => 'login',
 					strtolower($networkName)
