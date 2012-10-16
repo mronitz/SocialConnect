@@ -327,7 +327,7 @@ class SocialConnectComponent extends Component
 					'user_id' => $profileData['id'],
 					'user_name' => utf8_encode($profileData['first-name'] . ' ' . $profileData['last-name']),
 					'name' => $profileData['first-name'] . ' ' . $profileData['last-name'],
-					'picture_url' => $profileData['picture-url'],
+					'picture_url' => isset($profileData['picture-url']) ? $profileData['picture-url'] : "",
 					'user_network_url' => $profileData['public-profile-url']
 				)
 			);
