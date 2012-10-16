@@ -36,13 +36,15 @@ Usable as a component
 	public $components = array(
 		'SocialConnect.SocialConnect'
 	);
-	
+
+### Be sure to first get and set your social network keys (API keys/secret), and change the callback URL in the config file
+
 ## Example of usage
 
 	// Get the accessToken, or redirect if it doesn't exists in the session yet.
 			$accessToken = $this->SocialConnect->get_access_token(
 				$networkName,
-				array(
+				array( // Callback url after connecting to network, login User usually
 					'controller' => 'users',
 					'action' => 'login',
 					strtolower($networkName)
