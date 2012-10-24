@@ -42,6 +42,7 @@ Configure::write('Facebook.consumerSecret', '##### SECRET #####');
 Configure::write('Facebook.requestTokenUrl', 'https://graph.facebook.com/oauth/access_token?client_id=%s&client_secret=%s&redirect_uri=%s&code=%s');
 Configure::write('Facebook.authorizeUrl', 'https://graph.facebook.com/oauth/authorize?client_id=%s&redirect_uri=%s');
 Configure::write('Facebook.callbackUrl', array('controller' => 'users', 'action' => 'network_callback', 'facebook'));
+// Comment out the Facebook.callbackLoginUrl config if you want to customize the callbacks in your code
 Configure::write('Facebook.callbackLoginUrl', array('controller' => 'users', 'action' => 'login', 'facebook'));
 Configure::write('Facebook.getProfileUrl', 'https://graph.facebook.com/me?%s');
 ?>

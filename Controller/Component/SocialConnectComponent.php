@@ -149,7 +149,12 @@ class SocialConnectComponent extends Component
 		{
 			// facebook needs to authorize first..
 			$url = sprintf($networkConfig['authorizeUrl'],$networkConfig['consumerKey'],$callbackUrl);
-			$this->controller->Session->write($networkName . '.callbackRedirect', $networkConfig['callbackLoginUrl']);
+
+			// Why did the CallbackUrl get overwritten by the config? Lets just do that if it's set
+			if(isset($networkConfig['callbackLoginUrl'])) {
+				$this->controller->Session->write($networkName . '.callbackRedirect', $networkConfig['callbackLoginUrl']);
+			}
+
 			$this->controller->redirect($url);
 		}
 		else
