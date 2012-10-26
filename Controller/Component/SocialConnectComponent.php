@@ -50,7 +50,7 @@ class SocialConnectComponent extends Component
 	 * @access public
 	 * @return void
 	 */
-	public function initialize(&$controller)
+	public function initialize(Controller $controller)
 	{
 		$this->controller = $controller;
 	}
@@ -249,7 +249,7 @@ class SocialConnectComponent extends Component
 	 * @access public
 	 * @return void
 	 */
-	public function startup(&$controller)
+	public function startup(Controller $controller)
 	{
 		if ($this->controller->action == 'network_connect')
 		{
