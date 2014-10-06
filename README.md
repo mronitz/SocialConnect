@@ -13,13 +13,13 @@ Both standard in Cake 2.x
 
 Clone from github: in your plugin directory type 
 
-	git clone https://github.com/xzazx/SocialConnect.git SocialConnect
+	git clone https://github.com/mronitz/SocialConnect.git SocialConnect
 
 ### Submodule
 
 Add as Git submodule: in your plugin directory type 
 
-	git submodule add https://github.com/xzazx/SocialConnect.git SocialConnect
+	git submodule add https://github.com/mronitz/SocialConnect.git SocialConnect
 
 ### Manual
 
