@@ -53,6 +53,7 @@ Usable as a component
 
 			// Fetch the profile data by giving the accessToken.
 			$profileData = $this->SocialConnect->get_network_profile($networkName, $accessToken);
+			pr($profileData);
 
 
 ## @TODO
