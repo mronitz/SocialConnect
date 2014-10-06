@@ -345,7 +345,7 @@ class SocialConnectComponent extends Component
 			return array(
 				'Network' => array(
 					'user_id' => $profileData['id'],
-					'user_name' => $profileData['username'],
+					'user_name' => isset($profileData['username']) ? $profileData['username'] : $profileData['id'],
 					'name' => utf8_encode($profileData['name']),
 					'picture_url' => '',
 					'user_network_url' => $profileData['link']
