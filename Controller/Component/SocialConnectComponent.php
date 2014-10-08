@@ -201,7 +201,7 @@ class SocialConnectComponent extends Component
 				App::import('Vendor', 'SocialConnect.oauth', array('file' => 'OAuth' . DS . 'oauth_consumer.php'));
 				$consumer = new OAuth_Consumer($networkConfig['consumerKey'], $networkConfig['consumerSecret']);
 
-				$code = $this->controller->request->query["code"];
+				$code = isset($this->controller->request->query["code"]) ? $this->controller->request->query["code"] : null;
 				$callbackUrl = is_array($networkConfig['callbackUrl']) ? Router::url($networkConfig['callbackUrl'], array('full' => true)) : $networkConfig['callbackUrl'];
 				
 				$url = sprintf($networkConfig['requestTokenUrl'],$networkConfig['consumerKey'],$networkConfig['consumerSecret'],$callbackUrl,$code);
