@@ -27,7 +27,7 @@ Download as archive from github and extract to app/plugins/SocialConnect
 
 ### Loading
 
-Load as Plugin with config as bootstrap:
+Load as Plugin with config as bootstrap in your `app/Config/bootstrap.php`:
 
 	CakePlugin::load('SocialConnect',array('bootstrap' => array('config')));
 	
