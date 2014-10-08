@@ -40,7 +40,9 @@ Configure::write('Facebook.consumerSecret', '##### SECRET #####');
 
 #	API Call Settings for Facebook; Do not touch unless the API changes
 Configure::write('Facebook.requestTokenUrl', 'https://graph.facebook.com/oauth/access_token?client_id=%s&client_secret=%s&redirect_uri=%s&code=%s');
-Configure::write('Facebook.authorizeUrl', 'https://graph.facebook.com/oauth/authorize?client_id=%s&redirect_uri=%s');
+
+# Should you need extra permissions, use the scope var here; for now just email
+Configure::write('Facebook.authorizeUrl', 'https://graph.facebook.com/oauth/authorize?client_id=%s&redirect_uri=%s&scope=email');
 Configure::write('Facebook.callbackUrl', array('controller' => 'users', 'action' => 'network_callback', 'facebook'));
 // Comment out the Facebook.callbackLoginUrl config if you want to customize the callbacks in your code
 Configure::write('Facebook.callbackLoginUrl', array('controller' => 'users', 'action' => 'login', 'facebook'));
