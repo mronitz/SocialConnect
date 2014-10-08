@@ -317,6 +317,7 @@ class SocialConnectComponent extends Component
 					'user_id' => $profileData['id'],
 					'user_name' => utf8_encode($profileData['screen_name']),
 					'name' => $profileData['name'],
+					'email' => isset($profileData['email']) ? $profileData['email'] : null,
 					'picture_url' => $profileData['profile_image_url'],
 					'user_network_url' => 'http://www.twitter.com/' . $profileData['screen_name']
 				)
@@ -332,6 +333,7 @@ class SocialConnectComponent extends Component
 					'user_id' => $profileData['id'],
 					'user_name' => utf8_encode($profileData['first-name'] . ' ' . $profileData['last-name']),
 					'name' => $profileData['first-name'] . ' ' . $profileData['last-name'],
+					'email' => isset($profileData['email']) ? $profileData['email'] : null,
 					'picture_url' => isset($profileData['picture-url']) ? $profileData['picture-url'] : "",
 					'user_network_url' => $profileData['public-profile-url']
 				)
@@ -347,6 +349,7 @@ class SocialConnectComponent extends Component
 					'user_id' => $profileData['id'],
 					'user_name' => isset($profileData['username']) ? $profileData['username'] : $profileData['id'],
 					'name' => utf8_encode($profileData['name']),
+					'email' => isset($profileData['email']) ? $profileData['email'] : null,
 					'picture_url' => '',
 					'user_network_url' => $profileData['link']
 				)
